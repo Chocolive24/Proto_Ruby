@@ -58,6 +58,8 @@ void AProto_RubyCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	UE_LOG(LogTemp, Display, TEXT("Hello World From Olivier !"));
 }
 
 //////////////////////////////////////////////////////////////////////////
