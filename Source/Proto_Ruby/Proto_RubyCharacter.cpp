@@ -60,6 +60,7 @@ void AProto_RubyCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	UE_LOG(LogTemp, Display, TEXT("Hello World From Olivier !"));
+	UE_LOG(LogTemp, Display, TEXT("Hello World From Remy !"));
 }
 
 //////////////////////////////////////////////////////////////////////////
