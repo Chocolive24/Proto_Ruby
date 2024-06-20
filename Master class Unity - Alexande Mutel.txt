@@ -1,0 +1,75 @@
+Master class Unity - Alexande Mutel
+
+C# / .NET Performances:
+
+History:
+Release in 2000 by Microsoft suite a une bataille avec Java (Microsoft avec ca propre implémentation de java)
+Donner accès à un language agréable à utilsier -> éviter les problèmes de pointeurs
+
+Why C# ?
+productive language and ecosystem (VS, Rider..)
+object oritend prog
+unifiied type-safe system
+	primites inherites from single root "object"
+
+.NET platform provides
+the runtime:
+	multithread etc
+the libraries
+
+roslyn, the C# compiler is open source on github
+ILSpy .NET Decompiler free download
+
+C# insights
+Structs:
+comme en c++, mémoire lineair en mémoire
+pas d'alloc
+
+De nos jours avec le SIMD C# est plus rapide que le C++ en terme d'instruction (mais il ne faut pas oublier le garbage collector et autre override du C# (à mon avis ?) )
+
+async await ne veut pas dire multi-threading. Ca peut se faire sur le main thread avec des callback. Ca évite d'avoir du code bloquant sans devoir le multi-threadé.
+Ca permet d'avoir une programmation séquentiel sans devoir faire un callback nous même. C'est très agréable car async await fait tout à notre place.
+ca permet de faire de la prog concurrentielle sans faire appel à l'OS
+
+Unity Burst
+le .NET runtime 8 est très opti de nos jours, unity fait une transition vers du full C#. Le code qui se fait souvent via burst par les game dév de nos jours n'auront plus besoin de burst si unity utilise .NET runtime. LEs optis sont les mêmes.
+
+Pour les optis:
+1. L'algo doit être bon
+2. La code gen doit être bonne (la compilation)
+3. Le code doit êtte data oritented
+
+le data orientied va influcener la code gen et la créa de l'algo
+
+struct Ship
+{
+float speed;
+
+// 128 octets pour autzres attrivutes;
+}
+
+Faire la moyenne des speeds de 1M de ship n'est pas perforamant car trop de mémoire à parcourir
+les 128 octets pour chaque ship.
+
+Data oriented:
+chaque ship à un index vers un tableau de speed
+
+comme ca on parcourt que des speed float
+
+
+Conseilles portfolio CV:
+ouvrir son perimètre de recherche.
+avoir son code dispo sur github
+avoir un blog pour montrer les projets et les mettres en valeur
+	écrire ce qu'on fait et qu'on raconte les problèmes rencontrer.
+faire des projets en dehors de l'école et les montrer
+faire des tutos, des démos, des jeux, des cinématiques
+
+Son conseil:
+pour faire la diff ce qui aide c'est ce qu'on fait en dehors de l'école -> montrer notre passion au delà de ce qu'on fait à l'école.
+Partager sa passion.
+
+toujours regarder les offres d'emplois même en période de crise.
+candidatures spontanées c'est gettho quand crise (normal)
+
+
